@@ -1,0 +1,9 @@
+-@seeds.each do |seed|
+  .well.well-lg
+    =seed.title
+    %br
+    =seed.description
+    %br
+    %img{:alt => "some_text", :width => "200", :height => "200", :src => seed.image_url}/
+
+    %br

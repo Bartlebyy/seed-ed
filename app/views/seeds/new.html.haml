@@ -1,0 +1,12 @@
+=form_for @seed do |f|
+  =f.label "Title"
+  =f.text_field :title
+  =f.label "Creator"
+  =f.text_field :creator
+  =f.label "Image_Url"
+  =f.text_field :image_url
+  =f.label "Description"
+  =f.text_area :description
+  =f.label "Tag"
+  =f.text_field :tags
+  =f.submit
