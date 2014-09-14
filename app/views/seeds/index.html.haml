@@ -1,12 +1,24 @@
+%ul.nav.nav-tabs{:role => "tablist"}
+  %li.active
+    %a{:href => "#"} Spouting
+  %li
+    %a{:href => "#"} Wilted
+  %li
+    %a{:href => "#"} Garden
+%br
+%h1.text-center What is Sprouting?
+%br
 -@seeds.each do |seed|
+
   .col-sm-4
     .well.well-lg
       =seed.tags.upcase!
       %br
       %img{:alt => "some_text", :width => "200", :height => "200", :src => seed.image_url}/
       %br
-      seed.title
+      =seed.title
       %br
       =seed.description[0..100]+"..."
       %br
-      -percent =
+
+:javascript
