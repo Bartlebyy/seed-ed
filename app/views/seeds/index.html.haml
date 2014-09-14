@@ -1,9 +1,11 @@
 -@seeds.each do |seed|
-  .well.well-lg
-    =seed.title
-    %br
-    =seed.description
-    %br
-    %img{:alt => "some_text", :width => "200", :height => "200", :src => seed.image_url}/
-
-    %br
+  .col-sm-4
+    .well.well-lg
+      =seed.tags.upcase!
+      %br
+      =seed.title
+      %br
+      %img{:alt => "some_text", :width => "200", :height => "200", :src => seed.image_url}/
+      %br
+      =seed.description[0..100]+"..."
+      %br
