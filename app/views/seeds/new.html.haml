@@ -1,12 +1,19 @@
-=form_for @seed do |f|
-  =f.label "Title"
-  =f.text_field :title
-  =f.label "Creator"
-  =f.text_field :creator
-  =f.label "Image_Url"
-  =f.text_field :image_url
-  =f.label "Description"
-  =f.text_area :description
-  =f.label "Tag"
-  =f.text_field :tags
-  =f.submit
+=form_for @seed, :html => {:class => "form-horizontal center"} do |f|
+  .form-group
+    %h3 Seed planting time!
+    =f.label "Title"
+    =f.text_field :title, class: "form-control"
+    %br
+    =f.label "Creator"
+    =f.text_field :creator, class: "form-control"
+    %br
+    =f.label "Image_Url"
+    =f.text_field :image_url, class: "form-control"
+    %br
+    =f.label "Description"
+    =f.text_area :description, class: "form-control"
+    %br
+    =f.label "Tags"
+    =f.text_field :tags, class: "form-control"
+    %br
+    %button.btn.btn-primary submit
