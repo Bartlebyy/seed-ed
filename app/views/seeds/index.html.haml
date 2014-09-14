@@ -32,13 +32,18 @@
   .col-sm-6.col-md-3
     .thumbnail
       %a{:href => "seeds/#{seed.id}"}
-        %img{:alt => "some_text", :width => "300", :height => "300", :src => seed.image_url}/
+        =image_tag(seed.image_url)
       %h4
         =seed.title
       %p="by #{seed.creator}"
 
       %p= seed.description[0..100]+"..."
       %br
-      =seed.votes
+      %i.fa.fa-clock-o{style: "font-size: 2em;"}
+      =seed.time_limit
+      days left
+
+      %i.fa.fa-sun-o{style: "font-size: 2em; color: #ffa729; float: right;"}
+        =seed.votes
 
 :javascript
