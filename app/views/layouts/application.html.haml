@@ -1,6 +1,7 @@
 !!! 5
 %html(lang="en")
   %head
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic,500,500italic", :rel => "stylesheet", :type => "text/css"}
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -16,7 +17,6 @@
     = favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
     = javascript_include_tag "application"
-
 
   %body
     .navbar.navbar-inverse.navbar-static-top
@@ -40,9 +40,10 @@
             -else
               %li= link_to "Login", new_user_session_path, method: :post
               %li= link_to "Sign Up", new_user_registration_path
+
     .container
       .row
         = bootstrap_flash
         = yield
       %footer
-        %p &copy; seed-ed 2014
+        %p.text-center &copy; seed-ed 2014
