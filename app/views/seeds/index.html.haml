@@ -20,7 +20,7 @@
     .thumbnail
       =seed.tags.upcase!
       %br
-      %a{:href => "seeds/1"}
+      %a{:href => "seeds/#{seed.id}"}
         %img{:alt => "some_text", :width => "300", :height => "300", :src => seed.image_url}/
       %br
       =seed.title
