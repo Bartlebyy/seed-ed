@@ -38,12 +38,19 @@
       %p="by #{seed.creator}"
 
       %p= seed.description[0..100]+"..."
-      %br
+      %p= "% Pledged"
+      .progress
+        .progress-bar.progress-bar-success.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "00", "aria-valuenow" => "55", :role => "progressbar", :style => "width: #{seed.money}%"}
+          %span.sr-only 55% Complete (success)
+      %p= "% Volunteered"
+      .progress
+        .progress-bar.progress-bar-success.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "00", "aria-valuenow" => "55", :role => "progressbar", :style => "width: #{seed.volunteers}%"}
+          %span.sr-only 55% Complete (success)
       %i.fa.fa-clock-o{style: "font-size: 2em;"}
       =seed.time_limit
       days left
-
       %i.fa.fa-sun-o{style: "font-size: 2em; color: #ffa729; float: right;"}
         =seed.votes
+
 
 :javascript
