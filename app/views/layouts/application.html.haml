@@ -29,12 +29,10 @@
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
             -if current_user
-              %li= link_to "Search", "/path1"
-              %li= link_to "Logout", "/path2"
+              %li= link_to "Logout", delete_user_session_path
             -else
-              %li= link_to "What's Sprouting", "/path1"
-              %li= link_to "Login", "/path3"
-              %li= link_to "Sign Up", "/path3"
+              %li= link_to "Login", new_user_session_path 
+              %li= link_to "Sign Up", new_user_registration_path 
 
     .container
       .row
@@ -50,4 +48,4 @@
               %li= link_to "Link 2", "/path2"
               %li= link_to "Link 3", "/path3"
       %footer
-        %p &copy; Company 2014
+        %p &copy; seed-ed 2014
