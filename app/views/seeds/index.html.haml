@@ -1,6 +1,21 @@
 %head
   %link{:href => "custom.css", :rel => "stylesheet", :type => "text/css"}/
 
+#myCarousel.carousel.slide{"data-ride" => "carousel"}
+  / Indicators
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+  .carousel-inner
+    .item.active
+      =image_tag("carousel.png")
+      .container
+        .carousel-caption
+          %h1 Cultivate Youth Leadership in Your Community
+          %p
+            %a.btn.btn-lg.btn-primary{:href => "#", :role => "button"} Learn More!
+
+%br
+%br
 %ul.nav.nav-tabs{:role => "tablist"}
   %li.active
     %a{:href => "#"} Seeds
@@ -18,8 +33,8 @@
 
   .col-sm-6.col-md-3
     .thumbnail
-      =seed.tags.upcase!
-      %br
+      %h5
+        =seed.tags.upcase!
       %a{:href => "seeds/#{seed.id}"}
         %img{:alt => "some_text", :width => "300", :height => "300", :src => seed.image_url}/
       %br
