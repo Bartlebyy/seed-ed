@@ -1,6 +1,6 @@
 class SeedsController < ApplicationController
   def index
-    @seeds = Seed.all.order(updated_at: :asc)
+    @seeds = Seed.all.order(time_limit: :asc)
   end
 
   def show
