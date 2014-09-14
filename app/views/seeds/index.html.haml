@@ -35,7 +35,10 @@
         %img{:alt => "some_text", :width => "300", :height => "300", :src => seed.image_url}/
       %h4
         =seed.title
-      =seed.description[0..100]+"..."
+      %p="by #{seed.creator}"
+
+      %p= seed.description[0..100]+"..."
       %br
+      =seed.votes
 
 :javascript
