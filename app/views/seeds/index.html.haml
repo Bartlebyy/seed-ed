@@ -25,21 +25,16 @@
     %a{:href => "#"} My Garden
   %li
     %a{:href => "#"} Saved Seeds
-%hr
-%hr
 %h1.text-center Current Sprouts
 %br
 -@seeds.each do |seed|
 
   .col-sm-6.col-md-3
     .thumbnail
-      %h5
-        =seed.tags.upcase!
       %a{:href => "seeds/#{seed.id}"}
         %img{:alt => "some_text", :width => "300", :height => "300", :src => seed.image_url}/
-      %br
-      =seed.title
-      %br
+      %h4
+        =seed.title
       =seed.description[0..100]+"..."
       %br
 
