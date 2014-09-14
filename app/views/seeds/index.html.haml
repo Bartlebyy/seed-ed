@@ -1,3 +1,6 @@
+%head
+  %link{:href => "custom.css", :rel => "stylesheet", :type => "text/css"}/
+
 %ul.nav.nav-tabs{:role => "tablist"}
   %li.active
     %a{:href => "#"} Seeds
@@ -13,11 +16,12 @@
 %br
 -@seeds.each do |seed|
 
-  .col-sm-4
-    .well.well-lg
+  .col-sm-6.col-md-3
+    .thumbnail
       =seed.tags.upcase!
       %br
-      %img{:alt => "some_text", :width => "200", :height => "200", :src => seed.image_url}/
+      %a{:href => "seeds/1"}
+        %img{:alt => "some_text", :width => "300", :height => "300", :src => seed.image_url}/
       %br
       =seed.title
       %br

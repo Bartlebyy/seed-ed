@@ -6,7 +6,7 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
-  
+
 body {font-family: 'Roboto';'Open Sans', sans serif;}
 @import url("//fonts.googleapis.com/css?family=Lato:400,700,400italic");
 /*!
@@ -4584,7 +4584,7 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 21px;
   line-height: 1.42857143;
-  background-color: #ffffff;
+  background-color: #caead5;
   border: 1px solid #ecf0f1;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
