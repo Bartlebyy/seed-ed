@@ -18,7 +18,6 @@
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
     = javascript_include_tag "application"
 
-
   %body
     .navbar.navbar-default.navbar-static-top
       .container
@@ -32,12 +31,12 @@
             -if current_user
               %li= link_to "Logout", destroy_user_session_path, method: :delete
             -else
-              %li= link_to "Login", new_user_session_path, method: :post 
-              %li= link_to "Sign Up", new_user_registration_path 
+              %li= link_to "Login", new_user_session_path, method: :post
+              %li= link_to "Sign Up", new_user_registration_path
 
     .container
       .row
         = bootstrap_flash
         = yield
       %footer
-        %p &copy; seed-ed 2014
+        %p.text-center &copy; seed-ed 2014
