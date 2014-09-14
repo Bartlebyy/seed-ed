@@ -19,7 +19,7 @@
 
 
   %body
-    .navbar.navbar-default.navbar-static-top
+    .navbar.navbar-inverse.navbar-static-top
       .container
         %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
           %span.icon-bar
@@ -28,12 +28,16 @@
         %a.navbar-brand(href="#") Seed-Ed
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
+
+          %ul.nav.navbar-nav.navbar-right
+            %form.navbar-form.navbar-left{:role => "search"}
+              .form-group
+                %input.form-control{:placeholder => "North Atlanta High School", :type => "text"}/
             -if current_user
               %li= link_to "Logout", destroy_user_session_path, method: :delete
             -else
-              %li= link_to "Login", new_user_session_path, method: :post 
-              %li= link_to "Sign Up", new_user_registration_path 
-
+              %li= link_to "Login", new_user_session_path, method: :post
+              %li= link_to "Sign Up", new_user_registration_path
     .container
       .row
         = bootstrap_flash
