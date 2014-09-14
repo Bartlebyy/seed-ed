@@ -3,16 +3,14 @@
     %h1.text-center
       Garden Shed
       %small by Jesse Pinkerton
-  %h6 Gardeners
+  %h6 5 Gardeners to Reach Goal
   .progress
     .progress-bar.progress-bar-success.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "00", "aria-valuenow" => "55", :role => "progressbar", :style => "width: 40%"}
       %span.sr-only 55% Complete (success)
-  %h6 Water
+  %h6 $1500 of Water to Reach Goal
   .progress
     .progress-bar.progress-bar-success.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 40%"}
       %span.sr-only 40% Complete (success)
-
-
 
   .container
     .row
@@ -34,9 +32,11 @@
             = image_tag "member.png"
             = image_tag "sponsor-1.png"
             = image_tag "sponsor.png"
-        .btn.btn-sm.btn-success Updates
-        .btn.btn-sm.btn-success Comments
-        .btn.btn-sm.btn-success Members
+        %button.btn.btn-sm.btn-success Updates
+        %button.btn.btn-sm.btn-success Comments
+        %button.btn.btn-sm.btn-success Members
+        %button.btn.btn-sm{ style: "background-color: #ffff00; color: #ffffff"}
+          %i.fa.fa-sun-o{ style: "font-size: 2em;"}
       .cols-xs-6
         = image_tag "clarkemiddlecommunitygarden.png"
 
