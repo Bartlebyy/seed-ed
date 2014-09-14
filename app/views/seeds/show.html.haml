@@ -1,9 +1,8 @@
 .container
   .page-header
     %h1.text-center
-      =@seed.title
-      %small
-        ="by #{@seed.creator}"
+      Garden Shed
+      %small by Jesse Pinkerton
   %h6 Gardeners
   .progress
     .progress-bar.progress-bar-success.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "00", "aria-valuenow" => "55", :role => "progressbar", :style => "width: 40%"}
@@ -13,25 +12,38 @@
     .progress-bar.progress-bar-success.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 40%"}
       %span.sr-only 40% Complete (success)
 
-  %dl.dl-horizontal
-    %dt
-      Championed by:
-    %dd
-      = @seed.creator
-    %dt
-      Sponsored by:
-    %dd Walter White
-    %dt Due Date:
-    %dd October 31, 2014
-    %dt School:
-    %dd J. P. Wynne High School
+
+
+  .container
+    .row
+      .col-xs-6
+        %dl.dl-horizontal
+          %dt Championed by:
+          %dd Jesse Pinkerton
+          %dt Sponsored by:
+          %dd Walter White
+          %dt Due Date:
+          %dd November 1, 2014
+          %dt School:
+          %dd J. P. Wynne High School
+        %a.thumbnail{:href => "#"}
+          %img-rounded{:alt => "oh hai"}
+            = image_tag "member-1.png"
+            = image_tag "member-2.png"
+            = image_tag "member3.png"
+            = image_tag "member.png"
+            = image_tag "sponsor-1.png"
+            = image_tag "sponsor.png"
+        .btn.btn-sm.btn-success Updates
+        .btn.btn-sm.btn-success Comments
+        .btn.btn-sm.btn-success Members
+      .cols-xs-6
+        = image_tag "clarkemiddlecommunitygarden.png"
 
   .row
-    .col-xs-6.col-md-3
-      %a.thumbnail{:href => "#"}
-        %img.img-rounded{:alt => "oh hai", :src => "images/placeholder-90x90.png"}
+    %h5 About this Seed
 
-  %h5 About this Seed
+
   .panel.panel-default
     .panel-body
-      =@seed.description
+      J. P. Wynne High School chool community garden needs a new shed!  Late fall is the best time to build this, so mark your calendars to help out on November 15.  We need 10 volunteer hours, an expert carpenter, and $500 for materials.  Due date for pledges is November 1.
