@@ -2,6 +2,12 @@
   .row
     .col-md-9
       %h3=@seed.title
+      %p= "Championed by #{@seed.creator}"
+      %p= "Sponsored by #{@seed.sponsor}"
+      %br
+      .progress
+        .progress-bar{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%;"}
+          %span.sr-only 60% Complete
     .col-md-3
       .well.sidebar-nav
         %ul.nav.nav-list
@@ -10,4 +16,3 @@
           %li= link_to "Updates", "#"
           %li= link_to "Comments", "#"
           %li= link_to "Members", "#"
-
