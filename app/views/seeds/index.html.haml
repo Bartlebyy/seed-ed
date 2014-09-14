@@ -3,9 +3,10 @@
     .well.well-lg
       =seed.tags.upcase!
       %br
-      =seed.title
-      %br
       %img{:alt => "some_text", :width => "200", :height => "200", :src => seed.image_url}/
+      %br
+      seed.title
       %br
       =seed.description[0..100]+"..."
       %br
+      -percent =
