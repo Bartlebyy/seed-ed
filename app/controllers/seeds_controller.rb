@@ -17,7 +17,7 @@ class SeedsController < ApplicationController
     @seed[:money] = [10...99].sample
     @seed[:time_limit] = [1...30].sample
     if @seed.save
-      render :show
+      redirect_to @seed
     else
       render_invalid @seed
     end
