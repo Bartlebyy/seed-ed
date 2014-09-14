@@ -13,8 +13,9 @@ class SeedsController < ApplicationController
 
   def create
     @seed = Seed.new(params.require(:seed).permit(:title, :creator, :image_url, :description, :tags))
-    @seed[:volunteers] = "#{[10, 30, 50, 70, 80, 85, 90, 95, 100].sample}" + "%"
-    @seed[:money] = "#{[10, 30, 50, 70, 80, 85, 90, 95, 100].sample}" + "%"
+    @seed[:volunteers] = [10, 30, 50, 70, 80, 85, 90, 95, 100].sample
+    @seed[:money] = [10, 30, 50, 70, 80, 85, 90, 95, 100].sample
+    @seed[:time_limit] = [1..30].sample
     if @seed.save
       render :show
     else
