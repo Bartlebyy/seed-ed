@@ -1,28 +1,11 @@
-== README
+This was our submission for the 2014 Startup Weekend Hackathon.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+We had 1.5 days to design and create our project and this is what we came up with.
 
-Things you may want to cover:
+Our idea was Seed-ed, a website where students could take advantage of their
+creativity and post projects that needed funding and volunteers (ex: beach clean-up,
+community garden). Parents, classmates, and other members of the community would
+check the website periodically and either invest in a student's project, or volunteer
+for it.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Our team was made up of 5 people. Two of which were developers.
